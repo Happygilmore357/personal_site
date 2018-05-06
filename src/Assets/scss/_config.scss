@@ -1,0 +1,61 @@
+// Colors
+
+$white: #ffffff;
+$black: #010000;
+$darkBlue: #20498c;
+$gray: #575b60;
+$darkGray: #303d4c;
+$lightGray: #a2aebc;
+
+
+// Mixins
+
+// Translate y
+@mixin translateY($e) {
+    -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+    transform: translateY($e);
+}
+
+// Transition
+@mixin transition($e) {
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    transition: $e;
+}
+
+
+// Fonts
+
+body {
+    font-size: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    color: $black;
+}
+
+header {
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    @include transition(.4s ease-in-out);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $white;
+        @include transition(.4s ease-in-out);
+    }
+}
+
+.container-fluid {
+    line-height: 24px;
+
+}
+
+footer {
+    font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif;
+    color: $gray;
+}
