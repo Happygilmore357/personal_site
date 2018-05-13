@@ -1,0 +1,80 @@
+@import 'config';
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid $lightGray; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the  content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+          typing 3.5s steps(30, end),
+          blink-caret .5s step-end infinite;
+}
+
+/* The typing effect  */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $lightGray }
+}
+
+
+header {
+
+  position: relative;
+  display: block;
+  width: 100%;
+  background: $darkGray;
+  color: $white;
+  height: 70px;
+
+
+  .logo {
+    position: absolute;
+    top: 50%; left: 15px;
+    @include translateY(-50%);
+  }
+
+  nav,
+  nav ul,
+  nav ul li{
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    position: absolute;
+    top: 50%; right: 15px;
+    @include translateY(-50%);
+
+    ul li {
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 10px;
+
+      &.last {
+        margin: 0;
+      }
+
+      a {
+        font-size: 0.8em;
+        line-height: normal;
+        color: $lightGray;
+      }
+    }
+  }
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0; left: 0;
+}

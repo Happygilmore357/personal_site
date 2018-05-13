@@ -1,4 +1,4 @@
-@import '_config.scss';
+@import 'config';
 
 
 header {
@@ -19,7 +19,7 @@ header {
 
     nav,
     nav ul,
-    nav ul li, {
+    nav ul li{
         margin: 0;
         padding: 0;
     }

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
+// Import css
+import '../../Assets/css/Home.min.css';
+//src/Assets/css/Home.min.css
 
-
-class Homepage extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="container-fluid">
@@ -20,4 +22,4 @@ class Homepage extends Component {
   }
 }
 
-export default Homepage;
+export default Home;

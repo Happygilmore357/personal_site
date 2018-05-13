@@ -1,40 +1,38 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+    BrowserRouter as Router,
+    Route,
+    Link
 } from'react-router-dom';
 
-// Import css
-import './Assets/css/default.min.css';
 
 
 // components
 
-import Header from './components/headerComponent/header';
-import Footer from './components/footerComponent/footer';
-import Homepage from './components/pages/homePage';
-import Projects from './components/pages/projects';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import Homepage from './components/home/Home';
+import Projects from './components/projects/Projects';
 
 
 
 class App extends Component {
-  render() {
-    return (
-      <Router>
-      <div className="App">
-        
-        <Header />
+    render() {
+        return (
+            <Router>
+                <div className="App">
 
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/projects" component={Projects} />
+                    <Header />
 
-        <Footer />
+                    <Route exact path="/" component={Homepage} />
+                    <Route exact path="/projects" component={Projects} />
 
-      </div>
-      </Router>
-    );
-  }
+                    <Footer />
+
+                </div>
+            </Router>
+        );
+    }
 }
 
 
